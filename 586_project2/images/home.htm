@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://madeby.google.com/home/ -->
+<html lang="en_US" class="gr__madeby_google_com"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+<link rel="shortcut icon" href="https://www.google.com/favicon.ico">
+  <title>Google Home – Made by Google</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://madeby.google.com/home/">
+<meta property="og:image" content="https://storage.googleapis.com/madebygoog/v1/banners/home_banner.jpg">
+<meta property="og:title" content="Made by Google">
+<meta property="og:site_name" content="Made by Google">
+<meta name="description" content="Hands-free help from the Google Assistant. Enjoy music, get answers, manage your everyday tasks, and control smart devices.">
+<meta property="og:description" content="Hands-free help from the Google Assistant. Enjoy music, get answers, manage your everyday tasks, and control smart devices.">
+<link href="./home_files/css" rel="stylesheet">
+<link href="./home_files/icon" rel="stylesheet">
+<link rel="stylesheet" href="./home_files/main.min.css">
+<script type="text/javascript" id="www-widgetapi-script" src="./home_files/www-widgetapi.js" async=""></script><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-WQ4NL4"></script><script src="./home_files/angular.min.js"></script><style></style>
+<script src="./home_files/main-c699af012b5d8a5f083cbe59faf6358b.min.js"></script>
+<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id="
+    height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQ4NL4');</script>
+<script>
+  made.initVideoFallback({
+    imageSelector: '.ak-video-fallback .ak-video-fallback__image',
+    breakpoint: 812
+  });
+</script><style>@media (min-width: 812px) {.ak-video-fallback .ak-video-fallback__image{display:none !important}}</style><style>@media (max-width: 811px) {.ak-video-fallback video{display:none !important}}</style>
+<script src="./home_files/autotrack.js"></script>
+<script>
+  var autotrack = new gweb.analytics.AutoTrack({profile: 'UA-83799476-1'});
+</script>
+<link rel="stylesheet" type="text/css" href="chrome-extension://pkehgijcmpdhfbdbbnkijodmdjhbjlgp/skin/socialwidgets.css"></head>
+<body ng-class="{&#39;menu-toggled&#39;: $root.menuToggled}" ng-controller="made.HomeController as home" class="ng-scope isChrome" data-gr-c-s-loaded="true">
+
+
+<div ng-controller="made.PopupController as popupCtrl" class="ng-scope">
+
+<div class="nav ng-scope" ng-controller="made.HeaderController as header" ng-init="header.subnav = &#39;google-home&#39;">
+  <div class="header header--subnav-toggled header--visible" ng-class="{&#39;header--subnav-toggled&#39;: header.subnav}">
+    <div class="header__content">
+      <div class="header__content__left">
+        <div class="header__hamburger display--none--gt-lg" ng-class="{&#39;header__hamburger--toggled&#39;: $root.menuToggled}" ng-click="header.toggleMenu()">
+          <div class="header__hamburger__line"></div>
+          <div class="header__hamburger__line"></div>
+          <div class="header__hamburger__line"></div>
+        </div>
+
+        <a class="header__logo" href="https://madeby.google.com/"><img src="./home_files/logo.svg"></a>
+
+        <div class="header__nav display--none display--block--gt-lg">
+              <div class="header__nav__item">
+                <a class="header__link" href="https://madeby.google.com/phone/">Phones</a>
+              </div>
+              <div class="header__nav__item">
+                <a class="header__link" ng-class="{&#39;header__link--toggled&#39;: header.subnav == &#39;connected-home&#39;}" ng-click="header.toggleSubnav(&#39;connected-home&#39;)">Connected Home <img class="header__link__chevron" src="./home_files/chevron-down.svg"></a>
+              </div>
+              <div class="header__nav__item">
+                <a class="header__link" href="https://madeby.google.com/vr/">Virtual Reality</a>
+              </div>
+              <div class="header__nav__item">
+                <a class="header__link" ng-class="{&#39;header__link--toggled&#39;: header.subnav == &#39;streaming&#39;}" ng-click="header.toggleSubnav(&#39;streaming&#39;)">Streaming Devices <img class="header__link__chevron" src="./home_files/chevron-down.svg"></a>
+              </div>
+            <div class="header__nav__item" ng-show="popupCtrl.isEnabled()">
+              <a class="header__link" href="https://popup.withgoogle.com/nyc/">Visit Us</a>
+            </div>
+        </div>
+      </div>
+
+      <div class="header__content__right">
+        <a class="btn btn--cta gtm gtm-buy-header gtm-buy-home " data-ak-modal-id="buy">Pre-order</a>
+      </div>
+    </div>
+
+        <div class="header__subnav header__subnav--google-home header__subnav--visible" ng-class="{&#39;header__subnav--visible&#39;: header.subnav == &#39;google-home&#39;}">
+        <div class="header__subnav__item header__subnav__item--overview ">
+          Google Home
+        </div>
+      <div class="header__subnav__item
+        
+        header__subnav__item--active
+        ">
+        <a href="https://madeby.google.com/home/" class="header__link">Overview</a>
+      </div>
+      <div class="header__subnav__item
+        
+        
+        ">
+        <a href="https://madeby.google.com/home/features/" class="header__link">Features</a>
+      </div>
+      <div class="header__subnav__item
+        
+        
+        ">
+        <a href="https://madeby.google.com/home/services/" class="header__link">Services</a>
+      </div>
+      <div class="header__subnav__item
+        
+        
+        ">
+        <a href="https://madeby.google.com/home/learn/" class="header__link">Learn</a>
+      </div>
+        <div class="header__subnav__item header__subnav__item--overview header__subnav__item--border">
+<a href="https://madeby.google.com/wifi/">          Google Wifi
+</a>        </div>
+  </div>
+
+        <div class="header__subnav header__subnav--phone " ng-class="{&#39;header__subnav--visible&#39;: header.subnav == &#39;phone&#39;}">
+        <div class="header__subnav__item header__subnav__item--overview ">
+          Pixel
+        </div>
+      <div class="header__subnav__item
+        
+        
+        ">
+        <a href="https://madeby.google.com/phone/" class="header__link">Overview</a>
+      </div>
+      <div class="header__subnav__item
+        
+        
+        ">
+        <a href="https://madeby.google.com/phone/specs/" class="header__link">Tech Specs</a>
+      </div>
+      <div class="header__subnav__item
+        
+        
+        ">
+        <a href="https://madeby.google.com/phone/switch/" class="header__link">Switch</a>
+      </div>
+      <div class="header__subnav__item
+        
+        
+        ">
+        <a href="https://madeby.google.com/phone/support/" class="header__link">Support</a>
+      </div>
+  </div>
+
+        <div class="header__subnav header__subnav--connected-home " ng-class="{&#39;header__subnav--visible&#39;: header.subnav == &#39;connected-home&#39;}">
+      <div class="header__subnav__item
+        
+        header__subnav__item--active
+        ">
+        <a href="https://madeby.google.com/home/" class="header__link">Google Home</a>
+      </div>
+      <div class="header__subnav__item
+        
+        
+        ">
+        <a href="https://madeby.google.com/wifi/" class="header__link">Google Wifi</a>
+      </div>
+  </div>
+
+        <div class="header__subnav header__subnav--streaming " ng-class="{&#39;header__subnav--visible&#39;: header.subnav == &#39;streaming&#39;}">
+      <div class="header__subnav__item
+        header__link--external
+        
+        ">
+        <a href="https://chromecast.com/chromecast/?utm_source=made_by_google&amp;utm_campaign=chromecast&amp;utm_medium=MS" class="header__link">Chromecast</a>
+      </div>
+      <div class="header__subnav__item
+        header__link--external
+        
+        ">
+        <a href="https://chromecast.com/ultra/?utm_source=made_by_google&amp;utm_campaign=chromecast_ultra&amp;utm_medium=MS" class="header__link">Chromecast Ultra</a>
+      </div>
+      <div class="header__subnav__item
+        header__link--external
+        
+        ">
+        <a href="https://www.google.com/chromecast/speakers/?utm_source=made_by_google&amp;utm_campaign=chromecast_audio&amp;utm_medium=MS" class="header__link">Chromecast Audio</a>
+      </div>
+  </div>
+
+
+  </div>
+
+  <div class="menunav display--none--gt-lg" ng-class="{&#39;menunav--toggled&#39;: $root.menuToggled}">
+    <div class="menunav__item">
+        <a class="menunav__link" href="https://madeby.google.com/phone/">Phones</a>
+    </div>
+    <div class="menunav__item">
+        <a class="menunav__link" ng-class="{&#39;menunav__link--toggled&#39;: header.subnav == &#39;connected-home&#39;}" ng-click="header.toggleSubnav(&#39;connected-home&#39;)">Connected Home <img class="menunav__link__chevron" src="./home_files/chevron-down.svg"></a>
+        <div class="menunav__subnav" ng-class="{&#39;menunav__subnav--toggled&#39;: header.subnav == &#39;connected-home&#39;}">
+              <div class="menunav__subnav__item menunav__subnav__item--active">
+                <a class="menunav__link" href="https://madeby.google.com/home/">Google Home</a>
+              </div>
+              <div class="menunav__subnav__item">
+                <a class="menunav__link" href="https://madeby.google.com/wifi/">Google Wifi</a>
+              </div>
+        </div>
+    </div>
+    <div class="menunav__item">
+        <a class="menunav__link" href="https://madeby.google.com/vr/">Virtual Reality</a>
+    </div>
+    <div class="menunav__item">
+        <a class="menunav__link" ng-class="{&#39;menunav__link--toggled&#39;: header.subnav == &#39;streaming&#39;}" ng-click="header.toggleSubnav(&#39;streaming&#39;)">Streaming Devices <img class="menunav__link__chevron" src="./home_files/chevron-down.svg"></a>
+        <div class="menunav__subnav" ng-class="{&#39;menunav__subnav--toggled&#39;: header.subnav == &#39;streaming&#39;}">
+              <div class="menunav__subnav__item menunav__subnav__item--external">
+                <a class="menunav__link" href="https://chromecast.com/chromecast/?utm_source=made_by_google&amp;utm_campaign=chromecast&amp;utm_medium=MS">Chromecast</a>
+              </div>
+              <div class="menunav__subnav__item menunav__subnav__item--external">
+                <a class="menunav__link" href="https://chromecast.com/ultra/?utm_source=made_by_google&amp;utm_campaign=chromecast_ultra&amp;utm_medium=MS">Chromecast Ultra</a>
+              </div>
+              <div class="menunav__subnav__item menunav__subnav__item--external">
+                <a class="menunav__link" href="https://www.google.com/chromecast/speakers/?utm_source=made_by_google&amp;utm_campaign=chromecast_audio&amp;utm_medium=MS">Chromecast Audio</a>
+              </div>
+        </div>
+    </div>
+    <div class="menunav__item" ng-show="popupCtrl.isEnabled()">
+      <a class="menunav__link" href="https://popup.withgoogle.com/nyc/">Visit Us</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="home-hero" id="top">
+  <div class="home-hero__image">
+  </div>
+  <div class="home-hero__content-wrap">
+    <div class="home-hero__content ">
+      <div class="home-hero__title">Get to know Google Home.</div>
+      <div class="home-hero__body">Google Home is a voice-activated speaker powered by the Google Assistant. Ask it questions. Tell it to do things. It’s your own Google, always ready to help. Just start with, "Ok Google".</div>
+      <div class="home-hero__ctas">
+            <a class="home-hero__ctas__cta link link--youtube" data-ak-youtubemodal-video-id="r0iLfAV0pIg">Watch video</a>
+      </div>
+    </div>
+  </div>
+    <a class="home-hero__fab fab" href="https://madeby.google.com/home/#harmony" data-scroll=""></a>
+</div>
+
+
+
+
+
+<div class="section section--harmony section--centered section--centered--home" id="harmony">
+
+        <div class="section__content">
+      <div class="section__title">
+        Command your audio.
+      </div>
+<div class="section__body">A simple voice request triggers Google Home to play music, podcasts or radio from services like Google Play Music, Spotify, YouTube Music, Pandora and TuneIn.
+    </div>    <div class="section__ctas">
+          <a class="section__ctas__cta link link--arrowed" href="https://madeby.google.com/home/features/#?filters=entertainment">More audio features</a>
+
+
+    </div>
+  </div>
+
+    <div class="section__image">
+
+
+  </div>
+
+
+
+
+<div class="okgoogle">
+  <div class="okgoogle__bubbles okgoogle__bubbles--left">
+    <div class="okgoogle__bubbles__question">
+      <div class="okgoogle__bubble okgoogle__bubble--question okgoogle__bubble--">
+        <div class="okgoogle__bubble__inner">
+          <div class="okgoogle__bubble__content">Ok Google, play my "Friday starts now" playlist.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="okgoogle__bubbles__response">
+      <div class="okgoogle__bubble okgoogle__bubble--response okgoogle__bubble--">
+        <div class="okgoogle__bubble__inner">
+          <div class="okgoogle__bubble__content">Alright. Playing your Spotify playlist called "Friday Starts Now".</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="okgoogle__device"></div>
+  <div class="okgoogle__bg" style="background-image: url(https://storage.googleapis.com/madebygoog/v1/home/chirp_music-bg_1440_2x.jpg)"></div>
+</div>
+
+<div in-view="home.animate(&#39;harmony&#39;)"></div>
+</div>
+
+
+
+
+
+<div class="section section--knowitall section--centered section--centered--home" id="knowitall">
+
+        <div class="section__content">
+      <div class="section__title">
+        Ask it anything.
+      </div>
+<div class="section__body">Thanks to Google’s rich history in search, Google Home is ready for your questions. Get real-time answers including the latest on weather, traffic, finance, sports, local businesses and more.
+    </div>    <div class="section__ctas">
+          <a class="section__ctas__cta link link--arrowed" href="https://madeby.google.com/home/features/#?filters=answers">More things you can ask</a>
+
+
+    </div>
+  </div>
+
+    <div class="section__image">
+
+
+  </div>
+
+
+
+
+<div class="okgoogle">
+  <div class="okgoogle__bubbles okgoogle__bubbles--right">
+    <div class="okgoogle__bubbles__question">
+      <div class="okgoogle__bubble okgoogle__bubble--question okgoogle__bubble--">
+        <div class="okgoogle__bubble__inner">
+          <div class="okgoogle__bubble__content">Ok Google, what is "I'm allergic to shrimp" in Portuguese?</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="okgoogle__bubbles__response">
+      <div class="okgoogle__bubble okgoogle__bubble--response okgoogle__bubble--">
+        <div class="okgoogle__bubble__inner">
+          <div class="okgoogle__bubble__content">Sou alérgica a camarão</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="okgoogle__device"></div>
+  <div class="okgoogle__bg" style="background-image: url(https://storage.googleapis.com/madebygoog/v1/home/chirp_ask-bg_1440_2x.jpg)"></div>
+</div>
+
+<div in-view="home.animate(&#39;knowitall&#39;)"></div>
+</div>
+
+
+
+
+
+<div class="section section--uptotask section--centered section--centered--home" id="uptotask">
+
+        <div class="section__content">
+      <div class="section__title">
+        Plan to do more.
+      </div>
+<div class="section__body">With your permission, Google Home will learn about you and get personal. Google Home can retrieve your flight information, set alarms and timers, and even tell you about the traffic on your way to work.
+    </div>    <div class="section__ctas">
+          <a class="section__ctas__cta link link--arrowed" href="https://madeby.google.com/home/features/#?filters=plan,manage">More things you can do</a>
+
+
+    </div>
+  </div>
+
+    <div class="section__image">
+
+
+  </div>
+
+
+
+
+<div class="okgoogle">
+  <div class="okgoogle__bubbles okgoogle__bubbles--left">
+    <div class="okgoogle__bubbles__question">
+      <div class="okgoogle__bubble okgoogle__bubble--question okgoogle__bubble--">
+        <div class="okgoogle__bubble__inner">
+          <div class="okgoogle__bubble__content">Ok Google, tell me about my day.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="okgoogle__bubbles__response">
+      <div class="okgoogle__bubble okgoogle__bubble--response okgoogle__bubble--">
+        <div class="okgoogle__bubble__inner">
+          <div class="okgoogle__bubble__content">Good morning, Michelle. The time is 7:21 AM. The weather in San Francisco currently is 72 degrees and sunny. You may want some sunscreen. Today at 9:30 AM you have '5k run at Crissy Field'. Have a nice day!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="okgoogle__device"></div>
+  <div class="okgoogle__bg" style="background-image: url(https://storage.googleapis.com/madebygoog/v1/home/chirp_do-bg_1440_2x.jpg)"></div>
+</div>
+
+<div in-view="home.animate(&#39;uptotask&#39;)"></div>
+</div>
+
+
+
+
+
+<div class="section section--hometeam section--centered section--centered--home" id="hometeam">
+
+        <div class="section__content">
+      <div class="section__title">
+        Voice-control your smart devices.
+      </div>
+<div class="section__body">Google Home connects seamlessly with smart devices like Chromecast,
+Nest and Philips Hue, so you can use your voice to set the perfect
+temperature or turn down the lights.<br><br>Find out <a href="https://madeby.google.com/home/features/#?filters=home">everything</a> Google Home can
+do with your <a href="https://madeby.google.com/home/services/">smart devices</a>.
+
+    </div>  </div>
+
+    <div class="section__image">
+
+
+  </div>
+
+
+
+
+<div class="okgoogle">
+  <div class="okgoogle__bubbles okgoogle__bubbles--right">
+    <div class="okgoogle__bubbles__question">
+      <div class="okgoogle__bubble okgoogle__bubble--question okgoogle__bubble--">
+        <div class="okgoogle__bubble__inner">
+          <div class="okgoogle__bubble__content">Ok Google, play dance music on my Living Room TV.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="okgoogle__bubbles__response">
+      <div class="okgoogle__bubble okgoogle__bubble--response okgoogle__bubble--">
+        <div class="okgoogle__bubble__inner">
+          <div class="okgoogle__bubble__content">Ok, music from YouTube. Playing on Living Room TV.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="okgoogle__device"></div>
+  <div class="okgoogle__bg" style="background-image: url(https://storage.googleapis.com/madebygoog/v1/home/hometeam-bg.jpg)"></div>
+</div>
+
+<div in-view="home.animate(&#39;hometeam&#39;)"></div>
+</div>
+
+
+
+
+
+<div class="section section--home-designed section--centered" id="home-designed">
+
+        <div class="section__content">
+      <div class="section__title">
+        Design that speaks for itself.
+      </div>
+  </div>
+
+    <div class="section__image">
+
+
+  </div>
+
+
+
+
+
+<div class="home-designed">
+  <div class="grid">
+    <div class="grid__item grid__item--4-cols grid__item--lg grid__item--left">
+      <div class="home-designed__points">
+        <div class="home-designed__points">
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Far-field voice recognition.</div>
+    <div class="home-designed__points__point__body">Far-field microphones and industry-leading natural language processing ensure Google Home hears you reliably.</div>
+  </div>
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Multi-room capability.</div>
+    <div class="home-designed__points__point__body">Multiple Google Home devices can be grouped together to enjoy the same song in every room.</div>
+  </div>
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Customizable bases.</div>
+    <div class="home-designed__points__point__body">Optional base accessories allow you to customize Google Home with a simple twist and pull.</div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="grid__item grid__item--12-cols grid__item--6-cols--gt-md grid__item--4-cols--gt-lg grid__item--image">
+      <div class="home-designed__image" style="background-image: url(https://storage.googleapis.com/madebygoog/v1/home/designed.png)"></div>
+    </div>
+
+    <div class="grid__item grid__item--4-cols grid__item--lg grid__item--right">
+      <div class="home-designed__points">
+        <div class="home-designed__points">
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Touch controls.</div>
+    <div class="home-designed__points__point__body">The top touch surface gives you total control, and a mute button lets you put Google Home's microphones on standby.</div>
+  </div>
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Hi-Fi speaker.</div>
+    <div class="home-designed__points__point__body">An integrated high-excursion speaker delivers crystal-clear highs and rich bass.</div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <div class="grid__item grid__item--12-cols grid__item--sm">
+      <div class="home-designed__points">
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Hi-Fi speaker.</div>
+    <div class="home-designed__points__point__body">An integrated high-excursion speaker delivers crystal-clear highs and rich bass.</div>
+  </div>
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Far-field voice recognition.</div>
+    <div class="home-designed__points__point__body">Far-field microphones and industry-leading natural language processing ensure Google Home hears you reliably.</div>
+  </div>
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Customizable bases.</div>
+    <div class="home-designed__points__point__body">Optional base accessories allow you to customize Google Home with a simple twist and pull.</div>
+  </div>
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Touch controls.</div>
+    <div class="home-designed__points__point__body">The top touch surface gives you total control, and a mute button lets you put Google Home's microphones on standby.</div>
+  </div>
+</div>
+
+    </div>
+
+    <div class="grid__item grid__item--6-cols grid__item--md grid__item--valign-middle">
+      <div class="home-designed__points">
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Far-field voice recognition.</div>
+    <div class="home-designed__points__point__body">Far-field microphones and industry-leading natural language processing ensure Google Home hears you reliably.</div>
+  </div>
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Touch controls.</div>
+    <div class="home-designed__points__point__body">The top touch surface gives you total control, and a mute button lets you put Google Home's microphones on standby.</div>
+  </div>
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Customizable bases.</div>
+    <div class="home-designed__points__point__body">Optional base accessories allow you to customize Google Home with a simple twist and pull.</div>
+  </div>
+  <div class="home-designed__points__point">
+    <div class="home-designed__points__point__title">Hi-Fi speaker.</div>
+    <div class="home-designed__points__point__body">An integrated high-excursion speaker delivers crystal-clear highs and rich bass.</div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+</div><div class="section--home-gallery home-gallery" id="home-gallery">
+  <div class="section__content">
+    <div class="section__title">Style your Home.</div>
+    <div class="section__body">With bases available in seven colors, you can make Google Home fit with any space and decor.</div>
+  </div>
+  <div class="section__gallery">
+    <div class="section__gallery__carousel ng-scope slick-initialized slick-slider slick-dotted" id="home-gallery-carousel" ng-controller="made.SlickController as slick" ng-init="slick.init({&quot;dots&quot;: true, &quot;infinite&quot;: true, &quot;slidesToShow&quot;: 1, &quot;prevArrow&quot;: &quot;.section__gallery__prev&quot;, &quot;appendDots&quot;: &quot;.section__gallery__dots&quot;, &quot;fade&quot;: true, &quot;nextArrow&quot;: &quot;.section__gallery__next&quot;, &quot;galleryId&quot;: &quot;home-gallery-carousel&quot;, &quot;speed&quot;: 300, &quot;arrows&quot;: true})">
+      <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 11520px;" role="listbox"><div class="section__gallery__carousel__item slick-slide slick-current slick-active" style="background-image: url(&quot;https://storage.googleapis.com/madebygoog/v1/home/chirp_accessories-module_1440_3.jpg&quot;); width: 1440px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide00"></div><div class="section__gallery__carousel__item slick-slide" style="background-image: url(&quot;https://storage.googleapis.com/madebygoog/v1/home/chirp_accessories-module_1440_1.jpg&quot;); width: 1440px; position: relative; left: -1440px; top: 0px; z-index: 998; opacity: 0;" data-slick-index="1" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide01"></div><div class="section__gallery__carousel__item slick-slide" style="background-image: url(&quot;https://storage.googleapis.com/madebygoog/v1/home/chirp_accessories-module_1440_2.jpg&quot;); width: 1440px; position: relative; left: -2880px; top: 0px; z-index: 998; opacity: 0;" data-slick-index="2" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide02"></div><div class="section__gallery__carousel__item slick-slide" style="background-image: url(&quot;https://storage.googleapis.com/madebygoog/v1/home/chirp_accessories-module_1440_4.jpg&quot;); width: 1440px; position: relative; left: -4320px; top: 0px; z-index: 998; opacity: 0;" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide03"></div><div class="section__gallery__carousel__item slick-slide" style="background-image: url(&quot;https://storage.googleapis.com/madebygoog/v1/home/chirp_accessories-module_1440_5.jpg&quot;); width: 1440px; position: relative; left: -5760px; top: 0px; z-index: 998; opacity: 0;" data-slick-index="4" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide04"></div><div class="section__gallery__carousel__item slick-slide" style="background-image: url(&quot;https://storage.googleapis.com/madebygoog/v1/home/chirp_accessories-module_1440_6.jpg&quot;); width: 1440px; position: relative; left: -7200px; top: 0px; z-index: 998; opacity: 0;" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide05"></div><div class="section__gallery__carousel__item slick-slide" style="background-image: url(&quot;https://storage.googleapis.com/madebygoog/v1/home/chirp_accessories-module_1440_7.jpg&quot;); width: 1440px; position: relative; left: -8640px; top: 0px; z-index: 998; opacity: 0;" data-slick-index="6" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide06"></div><div class="section__gallery__carousel__item slick-slide" style="background-image: url(&quot;https://storage.googleapis.com/madebygoog/v1/home/chirp_accessories-module_1440_8.jpg&quot;); width: 1440px; position: relative; left: -10080px; top: 0px; z-index: 998; opacity: 0;" data-slick-index="7" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide07"></div></div></div>
+      
+      
+      
+      
+      
+      
+      
+    </div>
+    <div class="section__gallery__prev slick-arrow" style=""></div>
+    <div class="section__gallery__next slick-arrow" style=""></div>
+    <div class="section__gallery__dots" role="toolbar"><ul class="slick-dots" style="" role="tablist"><li class="slick-active" aria-hidden="false" role="presentation" aria-selected="true" aria-controls="navigation00" id="slick-slide00"><button type="button" data-role="none" role="button" tabindex="0">1</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation01" id="slick-slide01"><button type="button" data-role="none" role="button" tabindex="0">2</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation02" id="slick-slide02"><button type="button" data-role="none" role="button" tabindex="0">3</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation03" id="slick-slide03"><button type="button" data-role="none" role="button" tabindex="0">4</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation04" id="slick-slide04"><button type="button" data-role="none" role="button" tabindex="0">5</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation05" id="slick-slide05"><button type="button" data-role="none" role="button" tabindex="0">6</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation06" id="slick-slide06"><button type="button" data-role="none" role="button" tabindex="0">7</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation07" id="slick-slide07"><button type="button" data-role="none" role="button" tabindex="0">8</button></li></ul></div>
+  </div>
+</div>  <div class="section section--resources resources section--resources-home" id="resources">
+    <div class="resources grid grid--align-space-around">
+      <div class="grid__item resources__resource">
+        <div class="resources__resource__content">
+          <div class="resources__resource__title">Features.</div>
+          <div class="resources__resource__body">Discover everything you can do with Google Home.</div>
+        </div>
+        <div class="resources__resource__cta">
+          <a class="link link--arrowed" href="https://madeby.google.com/home/features/">See features</a>
+        </div>
+      </div>
+      <div class="grid__item resources__resource">
+        <div class="resources__resource__content">
+          <div class="resources__resource__title">Partners.</div>
+          <div class="resources__resource__body">Find out which services<br> and partners work <br>with Google Home.</div>
+        </div>
+        <div class="resources__resource__cta">
+          <a class="link link--arrowed" href="https://madeby.google.com/home/services/">See all</a>
+        </div>
+      </div>
+      <div class="grid__item resources__resource">
+        <div class="resources__resource__content">
+          <div class="resources__resource__title">Learn.</div>
+          <div class="resources__resource__body">Get to know more<br> about Google Home.</div>
+        </div>
+        <div class="resources__resource__cta">
+          <a class="link link--arrowed" href="https://madeby.google.com/home/learn/">Learn more</a>
+        </div>
+      </div>
+      <div class="grid__item resources__resource">
+        <div class="resources__resource__content">
+          <div class="resources__resource__title">Support.</div>
+          <div class="resources__resource__body">Have a question that<br> Home can't answer? Ask us.</div>
+        </div>
+        <div class="resources__resource__cta">
+          <a class="link link--arrowed" href="https://support.google.com/googlehome">Get support</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="section section--home-buy section--centered" id="home-buy">
+<div class="section__overlay"></div>
+    <div class="section__image">
+      <img src="./home_files/home.png">
+  </div>
+
+    <div class="section__content">
+<div class="section__title">Make it yours.</div><div class="section__body">Give your house a Google Home.</div>    <div class="section__ctas">
+        <a class="section__ctas__cta btn gtm-cta-modal-buy" data-ak-modal-id="buy">Pre-order</a>
+    </div>
+  </div>
+
+
+
+
+</div><div class="section section--signup signup" id="signup">
+  <div class="section__content">
+        <div class="section__title">Stay in the know.</div>
+        <div class="section__body">Keep me updated about devices from Google and all the things you can do with them.</div>
+        <div class="email ng-scope" ng-controller="made.EmailController as ctrl">
+          <div class="email__submitted">
+            Thank you! We'll be in touch soon.
+          </div>
+          <form class="email__form signup__form ng-pristine ng-valid" data-action="https://services.google.com/fb/submissions/539e3040794611e6a401613f003a6135-copy/">
+              <input type="hidden" name="UtmCampaign" value="">
+  <input type="hidden" name="UtmSource" value="">
+  <input type="hidden" name="UtmMedium" value="">
+  <input type="hidden" name="UtmTerm" value="">
+  <input type="hidden" name="UtmContent" value="">
+  <input type="hidden" name="AgreeTerms" value="on">
+  <input type="hidden" name="XdevicesDevicesFromGoogle" value="on">
+  <input type="hidden" name="LanguagePreference" value="en">
+  <input type="hidden" name="Country" value="US">
+
+            <div class="signup__form__input">
+              <input placeholder="Enter your email" name="EmailAddress" type="email" required="" ng-focus="ctrl.setOptionsVisible(true)">
+            </div>
+            <div class="email__form__options display display--sm">
+  
+</div>
+<div class="email__form__options">
+  <div class="email__error email__error--required">
+    All fields are required.
+  </div>
+  <div class="email__error email__error--submitted">
+    Sorry, there was an error submitting the form.
+  </div>
+  <div class="email__form__options__terms">
+    By submitting your email, you accept the <a href="https://www.google.com/policies/terms/" target="_blank">terms and conditions</a>.
+  </div>
+</div>
+
+            <div class="signup__form__submit">
+              <button class="link link--arrowed gtm-email-submit" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+  </div>
+</div>
+<div data-ak-modal="buy">
+
+
+<div class="modal modal--retailers modal--centered modal--buy">
+  <div class="aligner">
+    <div class="aligned">
+      <div class="modal__title">Select a retailer.</div>
+      <div class="grid grid--align-center buy">
+        <div class="grid__item--6-cols buy__box">
+          <div class="buy__box__pad">
+            <a class="gtm-buy gtm-buy-google-store buy__box__link" href="https://store.google.com/product/google_home?utm_source=madeByGoogle&amp;utm_medium=MS&amp;utm_campaign=google_home_BN" target="_blank"><img data-id="google-store" src="./home_files/google-store.png" alt="Google Store"></a>
+          </div>
+        </div>
+        <div class="grid__item--6-cols buy__box">
+          <div class="buy__box__pad">
+            <a class="gtm-buy gtm-buy-best-buy buy__box__link" href="http://www.bestbuy.com/site/olspage.jsp?skuId=5578849&amp;type=product" target="_blank"><img data-id="best-buy" src="./home_files/best-buy.png" alt="Best Buy"></a>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid--align-center buy">
+        <div class="grid__item--6-cols buy__box">
+          <div class="buy__box__pad">
+            <a class="gtm-buy gtm-buy-target buy__box__link" href="http://www.target.com/p/-/A-51513049" target="_blank"><img data-id="target" src="./home_files/target.png" alt="Target"></a>
+          </div>
+        </div>
+        <div class="grid__item--6-cols buy__box">
+          <div class="buy__box__pad">
+            <a class="gtm-buy gtm-buy-walmart buy__box__link" href="https://www.walmart.com/ip/54742302" target="_blank"><img data-id="walmart" src="./home_files/walmart.png" alt="Walmart"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="footer">
+  <div class="contained">
+    <div class="footer__social grid grid--valign-middle">
+      <div class="footer__social__title grid__item">Follow us</div>
+      <div class="footer__social__links grid__item">
+        <a href="https://twitter.com/MadeByGoogle" class="footer__social__links__link footer__social__links__link--twitter"><div class="footer__social__links__icon" style="background-image: url(/static/images/icon-twitter.svg)"></div></a>
+        <a href="https://www.youtube.com/user/Google" class="footer__social__links__link footer__social__links__link--youtube"><div class="footer__social__links__icon" style="background-image: url(/static/images/icon-youtube.svg)"></div></a>
+      </div>
+    </div>
+
+    <div class="footer__links grid grid--align-space-between grid--valign-middle">
+      <div class="footer__links__left grid__item">
+        <div class="grid grid--valign-middle">
+          <div class="grid__item">
+            <div class="footer__links__logo">
+              <a href="https://www.google.com/"><img src="./home_files/google.svg"></a>
+            </div>
+          </div>
+          <div class="footer__links__links grid__item">
+            <a class="footer__links__links__link" href="https://store.google.com/">Google Store</a>
+            <a class="footer__links__links__link" href="https://www.google.com/policies/privacy/">Privacy &amp; Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__links__right grid__item">
+        <div class="footer__links__links">
+          <a class="footer__links__links__link" href="https://support.google.com/googlehome/"><img class="help-icon" src="./home_files/help.png"> Help</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="email-bar ng-scope" ng-controller="made.EmailBarController as barCtrl" ng-hide="barCtrl.isCompleted()">
+  <div class="email-bar__content">
+    <div class="email ng-scope" ng-controller="made.EmailController as ctrl">
+      <div class="email__submitted">
+        Thank you! We'll be in touch soon.
+      </div>
+      <form class="email__form signup__form form ng-pristine ng-valid" data-action="https://services.google.com/fb/submissions/539e3040794611e6a401613f003a6135-copy/">
+        <div class="email-bar__text">Keep me updated about devices from Google and all the things you can do with them.</div>
+          <input type="hidden" name="UtmCampaign" value="">
+  <input type="hidden" name="UtmSource" value="">
+  <input type="hidden" name="UtmMedium" value="">
+  <input type="hidden" name="UtmTerm" value="">
+  <input type="hidden" name="UtmContent" value="">
+  <input type="hidden" name="AgreeTerms" value="on">
+  <input type="hidden" name="XdevicesDevicesFromGoogle" value="on">
+  <input type="hidden" name="LanguagePreference" value="en">
+  <input type="hidden" name="Country" value="US">
+
+        <div class="email-bar__input">
+          <input class="form__control" placeholder="Enter your email" name="EmailAddress" type="email" required="" ng-focus="ctrl.setOptionsVisible(true)">
+        </div>
+        <div class="email__form__options display display--sm">
+  
+</div>
+<div class="email__form__options">
+  <div class="email__error email__error--required">
+    All fields are required.
+  </div>
+  <div class="email__error email__error--submitted">
+    Sorry, there was an error submitting the form.
+  </div>
+  <div class="email__form__options__terms">
+    By submitting your email, you accept the <a href="https://www.google.com/policies/terms/" target="_blank">terms and conditions</a>.
+  </div>
+</div>
+
+        <button class="link link--arrowed gtm-email-bar-submit" type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="email-bar__x" ng-click="barCtrl.animateComplete()"></div>
+  </div>
+</div>
+<script>
+  made.main();
+</script><div class="ak-modal"><div class="ak-modal-x"></div><div class="ak-modal-mask"></div><div class="ak-modal-content"></div></div><div class="ak-youtubemodal"><div class="ak-youtubemodal-x"></div><div class="ak-youtubemodal-player"></div><div class="ak-youtubemodal-mask"></div></div><script src="./home_files/iframe_api"></script>
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
